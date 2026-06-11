@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juu Kyuu Coffee | Premium Cafe & Dining</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        yuu: {
+                            brown: '#3E2723',
+                            beige: '#F5F5DC',
+                            cream: '#FAF9F6',
+                            red:   '#D32F2F',
+                            gold:  '#C5A059'
+                        }
+                    },
+                    fontFamily: {
+                        serif: ['"Cormorant Garamond"', 'serif'],
+                        sans:  ['"Inter"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="font-sans antialiased overflow-x-hidden selection:bg-yuu-red selection:text-white">
+
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4 px-6 lg:px-12 glass-panel border-b border-gray-200/50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <a href="#home" class="flex items-center gap-3 group">
+                <img src="Assets/Juu Kyuu Transparent.png" alt="Juu Kyuu Coffee Logo" class="w-12 h-12 object-contain">                <div class="leading-tight">
+                    <h1 class="text-2xl font-serif font-bold text-yuu-brown tracking-tight group-hover:text-yuu-red transition-colors">
+                        Juu Kyuu Coffee
+                    </h1>
+                </div>
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide text-yuu-brown">
+                <a href="#home"     class="hover:text-yuu-red transition-colors">Home</a>
+                <a href="#about"    class="hover:text-yuu-red transition-colors">About</a>
+                <a href="#menu"     class="hover:text-yuu-red transition-colors">Menu</a>
+                <a href="#location" class="hover:text-yuu-red transition-colors">Location</a>
+                <a href="https://instagram.com" target="_blank" class="hover:text-yuu-red transition-colors">Instagram</a>
+            </div>
+
+            <a href="https://api.whatsapp.com/send/?phone=6281282652428&text=&type=phone_number&app_absent=0&wame_ctl=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcASXkelleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadZXlh8YH5gifo9_jPs3a5Su2TjkGSz2uFlRUE3nGo1wnRI4Zb5HSGhR4wcQg_aem_WtkX6J5ee5coPAVSwL3dbg" target="_blank"
+               class="hidden md:flex items-center gap-2 bg-yuu-brown text-white px-6 py-2.5 rounded-full hover:bg-yuu-red transition-all duration-300 shadow-lg hover:shadow-yuu-red/30 transform hover:-translate-y-0.5">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                <span>Reservasi via WA</span>
+            </a>
+
+            <button id="mobile-menu-btn" class="md:hidden text-yuu-brown focus:outline-none">
+                <i data-lucide="menu" class="w-8 h-8"></i>
+            </button>
+        </div>
+
+        <div id="mobile-menu" class="hidden absolute top-full left-0 w-full bg-white/95 backdrop-blur-md border-b border-gray-100 shadow-xl flex-col p-6 space-y-4 md:hidden">
+            <a href="#home"     class="block text-yuu-brown font-medium">Home</a>
+            <a href="#about"    class="block text-yuu-brown font-medium">About</a>
+            <a href="#menu"     class="block text-yuu-brown font-medium">Menu</a>
+            <a href="#location" class="block text-yuu-brown font-medium">Location</a>
+            <a href="https://wa.me/" class="block w-full text-center bg-yuu-red text-white py-3 rounded-lg font-semibold">Reservasi via WA</a>
+        </div>
+    </nav>
+
+    <section id="home" class="relative min-h-screen flex items-center pt-20 hero-bg">
+        <div class="absolute inset-0 bg-black/30"></div>
+        <div class="container mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+
+            <div class="text-white space-y-6 fade-in-up">
+                <div class="inline-block px-4 py-1 border border-white/30 rounded-full bg-white/10 backdrop-blur-sm text-sm font-medium tracking-widest uppercase mb-2">
+                    Est. 2022 • Grand Wisata Bekasi
+                </div>
+                <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight">
+                    Where Japanese Simplicity <span class="text-yuu-gold italic">Meets Exceptional Coffee</span>.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-200 max-w-lg font-light leading-relaxed">
+                    Enjoy carefully crafted coffee, signature creations, and a serene café experience inspired by Japanese aesthetics.                </p>
+                <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                    <a href="#menu" class="bg-yuu-red text-white px-8 py-4 rounded-full font-semibold hover:bg-red-700 transition-all shadow-lg hover:shadow-red-900/50 text-center">                        Explore Menu
+                    </a>
+                    <a href="#location" class="bg-transparent border border-white text-white px-8 py-4 rounded-full font-semibold hover:bg-white hover:text-yuu-brown transition-all text-center">
+                        Find Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="hidden md:block relative fade-in-up" style="transition-delay: 200ms;">
+                <div class="relative w-full aspect-square max-w-md mx-auto animate-float">
+                    <div class="absolute inset-0 bg-yuu-gold/20 rounded-full blur-3xl transform scale-90"></div>
+                    <img src="Assets/fav.jpg" alt="Juu Kyuu Signature"
+                         class="relative z-10 w-full h-full object-cover rounded-full shadow-2xl border-4 border-white/10 rotate-6 hover:rotate-0 transition-transform duration-700">
+
+                    <div class="absolute -bottom-4 -left-4 bg-white/90 backdrop-blur p-4 rounded-xl shadow-xl z-20 flex items-center gap-3">
+                        <div class="bg-yuu-red text-white p-2 rounded-full">
+                            <i data-lucide="star" class="w-5 h-5 fill-current"></i>
+                        </div>
+                        <div>
+                            <p class="text-xs text-gray-500 font-bold uppercase">Best Seller</p>
+                            <p class="text-yuu-brown font-serif font-bold text-lg">Juu Kyuu Coffee</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="relative z-20 -mt-16 container mx-auto px-6">
+        <div class="bg-white rounded-2xl shadow-xl p-6 md:p-8 flex flex-col md:flex-row justify-between items-center gap-6 border border-gray-100">
+
+            <div class="flex items-center gap-4 w-full md:w-auto justify-center border-b md:border-b-0 pb-4 md:pb-0 border-gray-100">
+                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <div>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Current Status</p>
+                    <p class="text-yuu-brown font-bold">Senin – Jumat: 10:00–22:00, Sabtu – Minggu: 08:00–23:00</p>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 w-full md:w-auto justify-center border-b md:border-b-0 pb-4 md:pb-0 border-gray-100">
+                <i data-lucide="map-pin" class="text-yuu-red w-6 h-6"></i>
+                <div>
+                    <p class="text-xs text-gray-500 uppercase font-bold tracking-wider">Location</p>
+                    <p class="text-yuu-brown font-bold">Ruko Westfield Jalan Western Boulevard, Jl. Grand Wisata blok ER 5 No.19, Mustikajaya, Kota Bks, Jawa Barat</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-center">
+                <i data-lucide="clock" class="text-yuu-brown w-6 h-6"></i>
+                <div class="w-full max-w-[150px]">
+                    <div class="flex justify-between text-xs mb-1">                        <span class="text-gray-500 font-bold">BUSY NOW</span>
+                        <span class="text-yuu-red font-bold">High</span>
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2">
+                        <div class="bg-yuu-red h-2 rounded-full" style="width: 60%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="about" class="py-24 bg-white relative overflow-hidden">
+        <div class="absolute top-20 left-0 w-72 h-72 bg-yuu-gold/10 rounded-full mix-blend-multiply filter blur-3xl opacity-60 -translate-x-1/2"></div>
+        <div class="absolute bottom-10 right-0 w-80 h-80 bg-yuu-beige rounded-full mix-blend-multiply filter blur-3xl opacity-70 translate-x-1/3"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                <div class="fade-in-up">
+                    <span class="inline-block px-4 py-1.5 bg-yuu-red/10 text-yuu-red text-xs font-bold uppercase tracking-widest rounded-full mb-6">
+                        九十九 • Our Story
+                    </span>
+                    <h2 class="text-4xl md:text-6xl font-serif font-bold text-yuu-brown leading-tight mb-6">
+                        A Taste of <span class="text-yuu-gold italic">Japan</span>,<br>Brewed in Bekasi.
+                    </h2>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        <span class="font-serif italic text-yuu-brown text-xl">"Ichi-go Ichi-e"</span> — satu pertemuan, satu kesempatan. Filosofi Jepang ini menjadi jiwa dari Juu Kyuu Coffee. Setiap cangkir yang kami sajikan adalah momen istimewa yang tidak akan terulang sama persis.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Berdiri sejak 2022 di Grand Wisata Bekasi, Juu Kyuu (九十九) menghadirkan perpaduan unik antara kesederhanaan estetika Jepang dan kekayaan biji kopi pilihan Nusantara. Nama "Juu Kyuu" sendiri terinspirasi dari angka 99 — simbol kesempurnaan yang selalu kami kejar dalam setiap racikan.
+                    </p>
+                    <p class="text-gray-600 leading-relaxed mb-5">
+                        Dari biji kopi single origin hingga signature drink khas, setiap sajian diracik dengan ketelitian seorang <span class="font-semibold text-yuu-brown">shokunin</span> — pengrajin yang mendedikasikan diri pada kesempurnaan.
+                    </p>
+
+                    <div class="flex flex-wrap gap-6">
+                        <div>
+                            <p class="text-4xl font-serif font-bold text-yuu-red">3+</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider font-bold">Years Brewing</p>
+                        </div>
+                        <div class="w-px bg-gray-200"></div>
+                        <div>
+                            <p class="text-4xl font-serif font-bold text-yuu-red">20+</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider font-bold">Signature Menus</p>
+                        </div>
+                        <div class="w-px bg-gray-200"></div>
+                        <div>                            <p class="text-4xl font-serif font-bold text-yuu-red">100%</p>
+                            <p class="text-sm text-gray-500 uppercase tracking-wider font-bold">Premium Beans</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative fade-in-up" style="transition-delay: 200ms;">
+                    <div class="relative">
+                        <div class="absolute -top-6 -left-6 w-32 h-32 bg-yuu-gold/30 rounded-full blur-2xl"></div>
+                        <div class="absolute -bottom-6 -right-6 w-40 h-40 bg-yuu-red/20 rounded-full blur-2xl"></div>
+
+                        <div class="grid grid-cols-2 gap-4 relative z-10">
+                            <div class="space-y-4">
+                                <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] transform hover:scale-105 transition-transform duration-500">
+                                    <img src="Assets/Interior.jpeg" alt="Juu Kyuu Interior" class="w-full h-full object-cover">
+                                </div>
+                                <div class="rounded-2xl overflow-hidden shadow-lg aspect-square bg-yuu-brown flex items-center justify-center p-6 text-center">
+                                    <div>
+                                        <p class="text-yuu-gold font-serif italic text-2xl mb-2">"Oishii"</p>
+                                        <p class="text-white text-xs uppercase tracking-widest">Delicious</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="space-y-4 pt-8">
+                                <div class="rounded-2xl overflow-hidden shadow-lg aspect-square bg-yuu-cream flex items-center justify-center p-6 text-center border border-yuu-gold/20">
+                                    <div>
+                                        <p class="text-yuu-brown font-serif text-4xl font-bold mb-1">九十九</p>
+                                        <p class="text-yuu-red text-xs uppercase tracking-widest font-bold">Juu Kyuu • 99</p>
+                                    </div>
+                                </div>
+                                <div class="rounded-2xl overflow-hidden shadow-lg aspect-[3/4] transform hover:scale-105 transition-transform duration-500">
+                                    <img src="Assets/Signature.jpg" alt="Signature Drink" class="w-full h-full object-cover">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 fade-in-up">
+                <div class="group bg-yuu-cream p-8 rounded-2xl border border-gray-100 hover:border-yuu-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-yuu-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yuu-red transition-colors">
+                        <i data-lucide="coffee" class="w-7 h-7 text-yuu-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-yuu-brown mb-2">Premium Beans</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Biji kopi single origin pilihan dari berbagai penjuru Nusantara, di-roast dengan presisi.</p>
+                </div>
+
+                <div class="group bg-yuu-cream p-8 rounded-2xl border border-gray-100 hover:border-yuu-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-yuu-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yuu-red transition-colors">                        <i data-lucide="leaf" class="w-7 h-7 text-yuu-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-yuu-brown mb-2">Japanese Aesthetic</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Suasana tenang dengan sentuhan minimalis Jepang — tempat sempurna untuk bersantai.</p>
+                </div>
+                <div class="group bg-yuu-cream p-8 rounded-2xl border border-gray-100 hover:border-yuu-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-yuu-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yuu-red transition-colors">
+                        <i data-lucide="sparkles" class="w-7 h-7 text-yuu-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-yuu-brown mb-2">Signature Drinks</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Kreasi eksklusif yang tidak akan kamu temukan di tempat lain — racikan khas Juu Kyuu.</p>
+                </div>
+
+                <div class="group bg-yuu-cream p-8 rounded-2xl border border-gray-100 hover:border-yuu-gold hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-14 h-14 bg-yuu-red/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-yuu-red transition-colors">
+                        <i data-lucide="heart" class="w-7 h-7 text-yuu-red group-hover:text-white transition-colors"></i>
+                    </div>
+                    <h3 class="text-xl font-serif font-bold text-yuu-brown mb-2">Made with Love</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Setiap minuman diracik penuh perhatian oleh barista berpengalaman layaknya seorang shokunin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu" class="py-24 bg-yuu-cream relative overflow-hidden">
+
+        <div class="absolute top-0 right-0 w-64 h-64 bg-yuu-beige rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/2 -translate-y-1/2"></div>
+        <div class="absolute bottom-0 left-0 w-96 h-96 bg-yuu-gold/10 rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/2 translate-y-1/2"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-in-up">
+                <h2 class="text-4xl md:text-5xl font-serif font-bold text-yuu-brown mb-4">Curated Menu</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Discover handcrafted coffee, Japanese-inspired drinks, and cozy aesthetic moments.</p>
+
+                <div class="flex flex-wrap justify-center gap-4 mt-8" id="menu-tabs">
+                    <button onclick="filterMenu('all')"  class="tab-btn active px-6 py-2 rounded-full border border-yuu-brown bg-yuu-brown text-white transition-all hover:shadow-lg">All</button>
+                    <button onclick="filterMenu('main')" class="tab-btn px-6 py-2 rounded-full border border-yuu-brown text-yuu-brown hover:bg-yuu-brown hover:text-white transition-all">Favorite</button>
+                </div>
+            </div>
+            
+            <div id="menu-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"></div>
+        </div>
+    </section>
+
+    <footer id="location" class="bg-yuu-brown text-yuu-beige pt-20 pb-10">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+
+                <div class="rounded-2xl overflow-hidden shadow-2xl h-80 relative group">                    <iframe
+                        src="https://maps.google.com/maps?q=-6.2954244,107.0366663&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                    <div class="absolute bottom-4 left-4 bg-white text-yuu-brown px-4 py-2 rounded-lg shadow-lg font-bold text-sm">
+                        Get Directions
+                    </div>                </div>
+
+                <div class="flex flex-col justify-center space-y-8">
+                    <div>
+                        <h3 class="text-3xl font-serif font-bold mb-2 text-white">Visit Juu Kyuu Coffee</h3>
+                        <p class="text-yuu-beige/70">Experience the warmth of our cafe.</p>
+                    </div>
+
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="map-pin" class="text-yuu-red mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Address</h4>
+                                <p class="text-yuu-beige/80">Jl. Grand Wisata blok ER 5 No.19, Mustikajaya,<br>Bekasi, Indonesia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="clock" class="text-yuu-red mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Opening Hours</h4>
+                                <p class="text-yuu-beige/80">Senin – Jumat: 10:00–22:00, Sabtu – Minggu: 08:00–23:00</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <i data-lucide="phone" class="text-yuu-red mt-1"></i>
+                            <div>
+                                <h4 class="font-bold text-white">Contact</h4>
+                                <p class="text-yuu-beige/80">+62 812 3456 7890</p>
+                            </div>
+                        </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="https://www.instagram.com/juukyuucoffee?igsh=MTAxNzVxb3o5NWg5dQ=="
+                           class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yuu-red transition-colors">
+                            <i class="fa-brands fa-instagram text-white"></i>
+                        </a>
+                        <a href="https://www.tiktok.com/@juukyuucoffee_?_r=1&_t=ZS-96tqztMmlL3"
+                           class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yuu-red transition-colors">
+                            <i class="fa-brands fa-tiktok text-white"></i>
+                        </a>
+                                                <a href="https://api.whatsapp.com/send/?phone=6281282652428&text=&type=phone_number&app_absent=0&wame_ctl=1&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAb21jcASXkelleHRuA2FlbQIxMQBzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAadZXlh8YH5gifo9_jPs3a5Su2TjkGSz2uFlRUE3nGo1wnRI4Zb5HSGhR4wcQg_aem_WtkX6J5ee5coPAVSwL3dbg"
+                           class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-yuu-red transition-colors">
+                            <i class="fa-brands fa-whatsapp text-white"></i>                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-8 text-center text-sm text-yuu-beige/50">
+                <p>&copy; 2026 Juu Kyuu Coffee. All rights reserved.</p>
+            </div>        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
